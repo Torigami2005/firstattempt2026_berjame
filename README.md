@@ -38,7 +38,7 @@ Follow these steps to replicate the repository and run the application on a diff
 - Claude (Coding implementation)
 
 ## Prompt
-> "Pretend you are a senior developer at Ateneo de Davao's faculty.  
+> Pretend you are a senior developer at Ateneo de Davao's faculty.  
 
 > You are tasked to convert the mobile application into a desktop website with responsiveness.
 
@@ -48,7 +48,7 @@ Follow these steps to replicate the repository and run the application on a diff
 
 > I will send the link of the google docs: https://docs.google.com/document/d/1Lg0KfNQH-eUhDGuio6dBdiBnE5VJIDGH6ydOPPgPgUc/edit?tab=t.0 
 
-> here are the screenshots:"
+> here are the screenshots:
 
 ## Screenshots
 Below are the official screenshots of the web application in a desktop browser:
