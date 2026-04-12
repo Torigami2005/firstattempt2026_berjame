@@ -1,4 +1,4 @@
-<Berjame>
+<h1>Berjame</h1>
 
 ## Project Details
 - **Framework:** NuxtJS
