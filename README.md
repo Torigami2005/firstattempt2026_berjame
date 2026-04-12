@@ -46,7 +46,8 @@ I will be sending screenshots of the figma prototype along with its flow.
 
 According to the instrument, you are tasked to convert this mobile application in to desktop website by using NuxtJS in a single file. No additional file wil be added. make sure it is compiled into a single file. since NuxtJS is different framework from any frameworks, I suggest that it should be compiled for all single file including html elements, css styles, and functionalities in javascript. 
 
-I will send the link of the google docs: https://docs.google.com/document/d/1Lg0KfNQH-eUhDGuio6dBdiBnE5VJIDGH6ydOPPgPgUc/edit?tab=t.0
+I will send the link of the google docs: https://docs.google.com/document/d/1Lg0KfNQH-eUhDGuio6dBdiBnE5VJIDGH6ydOPPgPgUc/edit?tab=t.0 
+<
 
 here are the screenshots:"
 
