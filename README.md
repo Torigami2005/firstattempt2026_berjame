@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1cf25a04-9a88-47cb-a135-d9f781456730" /># <Berjame>
+<Berjame>
 
 ## Project Details
 - **Framework:** NuxtJS
