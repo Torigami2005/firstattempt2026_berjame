@@ -4,9 +4,11 @@ import { onMounted } from "vue";
 useHead({
 	title: "Blue Links – Ateneo de Davao Alumni Portal",
 	meta: [
-		{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+		{ name: "viewport", content: "width=device-width, initial-scale=1.0" },
+		{ name: "theme-color", content: "#0d1b4b" }
 	],
 	link: [
+		{ rel: "manifest", href: "/manifest.webmanifest" },
 		{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 		{
 			rel: "stylesheet",
@@ -163,6 +165,12 @@ onMounted(() => {
 	document.querySelectorAll(".filter-btn").forEach((b) => {
 		b.addEventListener("click", () => b.classList.toggle("on"));
 	});
+  
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('SW registered:', reg))
+      .catch(err => console.error('SW error:', err))
+  }
 	const w = globalThis;
 	Object.assign(w, {
 		showPage,
