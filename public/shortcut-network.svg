@@ -1,0 +1,24 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <!-- Network Shortcut Icon -->
+  <defs>
+    <linearGradient id="networkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004d80;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" fill="url(#networkGradient)"/>
+  <!-- Network nodes -->
+  <circle cx="60" cy="70" r="8" fill="#c9a84c"/>
+  <circle cx="96" cy="50" r="8" fill="#c9a84c"/>
+  <circle cx="132" cy="70" r="8" fill="#c9a84c"/>
+  <circle cx="96" cy="120" r="8" fill="#c9a84c"/>
+  <circle cx="60" cy="140" r="8" fill="#c9a84c"/>
+  <circle cx="132" cy="140" r="8" fill="#c9a84c"/>
+  <!-- Network connections -->
+  <line x1="60" y1="70" x2="96" y2="50" stroke="#c9a84c" stroke-width="2" opacity="0.6"/>
+  <line x1="96" y1="50" x2="132" y2="70" stroke="#c9a84c" stroke-width="2" opacity="0.6"/>
+  <line x1="60" y1="70" x2="96" y2="120" stroke="#c9a84c" stroke-width="2" opacity="0.6"/>
+  <line x1="132" y1="70" x2="96" y2="120" stroke="#c9a84c" stroke-width="2" opacity="0.6"/>
+  <line x1="96" y1="120" x2="60" y2="140" stroke="#c9a84c" stroke-width="2" opacity="0.6"/>
+  <line x1="96" y1="120" x2="132" y2="140" stroke="#c9a84c" stroke-width="2" opacity="0.6"/>
+</svg>
