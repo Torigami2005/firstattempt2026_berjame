@@ -1,5 +1,10 @@
 <script setup>
 import { onMounted } from "vue";
+import CacheManager from "../utils/cache-manager.js";
+import PWAManager from "../utils/pwa-manager.js";
+import PWAInstallPrompt from "../components/PWAInstallPrompt.vue";
+import PWAOfflineIndicator from "../components/PWAOfflineIndicator.vue";
+import PWAUpdateNotification from "../components/PWAUpdateNotification.vue";
 
 useHead({
 	title: "Blue Links – Ateneo de Davao Alumni Portal",
@@ -160,6 +165,59 @@ useHead({
   }
 
 onMounted(() => {
+	// Register Service Worker for offline support
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/service-worker.js')
+			.then((registration) => {
+				console.log('[App] Service Worker registered successfully:', registration);
+				
+				// Handle updates
+				registration.addEventListener('updatefound', () => {
+					const newWorker = registration.installing;
+					newWorker.addEventListener('statechange', () => {
+						if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+							console.log('[App] New Service Worker available - reload to update');
+							// Optionally show a notification to the user about the update
+						}
+					});
+				});
+			})
+			.catch((error) => {
+				console.error('[App] Service Worker registration failed:', error);
+			});
+	}
+
+	// Initialize Cache Manager
+	if ('caches' in window) {
+		// Request persistent storage for better offline support
+		CacheManager.requestPersistentStorage().then((granted) => {
+			if (granted) {
+				console.log('[App] Persistent storage granted');
+			}
+		});
+
+		// Monitor network status
+		const unsubscribe = CacheManager.onNetworkStatusChange((isOnline) => {
+			console.log('[App] Network status changed:', isOnline ? 'ONLINE' : 'OFFLINE');
+			// You can add UI feedback here, e.g., show/hide offline banner
+		});
+
+		// Log cache info for debugging
+		CacheManager.logCacheContents();
+		CacheManager.getCacheSize().then((size) => {
+			if (size) {
+				console.log('[App] Cache usage:', `${Math.round(size.usage / 1024)} KB / ${Math.round(size.quota / 1024)} KB (${size.percentage}%)`);
+			}
+		});
+
+		// Expose cache manager globally for manual control
+		globalThis.CacheManager = CacheManager;
+	}
+
+	// Initialize PWA Manager
+	PWAManager.init();
+	globalThis.PWAManager = PWAManager;
+
 	document.querySelectorAll(".filter-btn").forEach((b) => {
 		b.addEventListener("click", () => b.classList.toggle("on"));
 	});
@@ -189,6 +247,11 @@ onMounted(() => {
 </script>
 
 <template>
+<!-- PWA Components -->
+<PWAOfflineIndicator />
+<PWAInstallPrompt />
+<PWAUpdateNotification />
+
 <!-- ===== SPLASH ===== -->
 <div id="page-splash" class="page active">
   <div class="splash-content">

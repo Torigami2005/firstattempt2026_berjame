@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - Blue Links Alumni Portal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #003366 0%, #004d80 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+
+    .offline-container {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .offline-icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #003366;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .offline-status {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .offline-content {
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .offline-content h2 {
+      font-size: 16px;
+      color: #003366;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .offline-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .offline-content li {
+      padding: 8px 0;
+      color: #666;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .offline-content li:before {
+      content: "✓";
+      color: #c9a84c;
+      font-weight: bold;
+      display: inline-block;
+      width: 20px;
+    }
+
+    .offline-actions {
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+    }
+
+    .offline-btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .offline-btn-primary {
+      background: linear-gradient(135deg, #003366 0%, #004d80 100%);
+      color: white;
+    }
+
+    .offline-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 51, 102, 0.3);
+    }
+
+    .offline-btn-secondary {
+      background: #f0f0f0;
+      color: #003366;
+      border: 2px solid #003366;
+    }
+
+    .offline-btn-secondary:hover {
+      background: #e8e8e8;
+    }
+
+    .offline-tips {
+      background: #fffbf0;
+      border-left: 4px solid #c9a84c;
+      padding: 15px;
+      border-radius: 4px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .offline-tips h3 {
+      color: #003366;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .offline-tips p {
+      color: #666;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .ateneo-badge {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    .ateneo-badge p {
+      font-size: 12px;
+      color: #999;
+      margin: 0;
+    }
+
+    .ateneo-logo {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 500px) {
+      .offline-container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .offline-icon {
+        font-size: 60px;
+      }
+
+      .offline-content {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="offline-container">
+    <div class="offline-icon">📱</div>
+    
+    <h1>You're Offline</h1>
+    
+    <p class="offline-status">
+      Blue Links is designed to work offline, but this page couldn't be loaded.
+    </p>
+
+    <div class="offline-tips">
+      <h3>💡 What can you do?</h3>
+      <p>Visit a page you've already loaded to access cached content. Blue Links caches your profile, job listings, and network connections for offline access.</p>
+    </div>
+
+    <div class="offline-content">
+      <h2>Cached Features Available:</h2>
+      <ul>
+        <li>Your Alumni Profile</li>
+        <li>Job Board Listings</li>
+        <li>Alumni Network</li>
+        <li>Past Notifications</li>
+      </ul>
+    </div>
+
+    <div class="offline-actions">
+      <button class="offline-btn offline-btn-primary" onclick="location.href='/'">
+        Go to Home
+      </button>
+      <button class="offline-btn offline-btn-secondary" onclick="location.href='/jobs'">
+        View Jobs (Cached)
+      </button>
+      <button class="offline-btn offline-btn-secondary" onclick="location.reload()">
+        Try Reloading
+      </button>
+    </div>
+
+    <div class="ateneo-badge">
+      <div class="ateneo-logo">🦅</div>
+      <p>Blue Links – Ateneo de Davao Alumni Portal</p>
+      <p>Built for Connection, Designed for Reliability</p>
+    </div>
+  </div>
+
+  <script>
+    // Check online status periodically
+    const checkConnection = () => {
+      fetch('/manifest.json', { method: 'HEAD' })
+        .then(() => {
+          // We're back online
+          console.log('Back online!');
+          location.reload();
+        })
+        .catch(() => {
+          // Still offline
+          console.log('Still offline');
+        });
+    };
+
+    // Check every 5 seconds
+    setInterval(checkConnection, 5000);
+
+    // Also listen for online event
+    window.addEventListener('online', () => {
+      location.reload();
+    });
+  </script>
+</body>
+</html>

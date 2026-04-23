@@ -1,0 +1,18 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueLinksGradient512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004d80;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#blueLinksGradient512)"/>
+  <!-- Shield -->
+  <path d="M 256 52 L 373 106 L 373 253 C 373 333 312 413 256 453 C 200 413 139 333 139 253 L 139 106 Z" fill="none" stroke="#c9a84c" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Inner shield -->
+  <path d="M 256 92 L 346 133 L 346 253 C 346 315 293 387 256 421 C 219 387 166 315 166 253 L 166 133 Z" fill="#c9a84c" opacity="0.1"/>
+  <!-- B Letter -->
+  <text x="256" y="333" text-anchor="middle" font-size="192" font-weight="bold" fill="#c9a84c" font-family="Georgia, serif">B</text>
+  <!-- Accent line -->
+  <line x1="160" y1="468" x2="352" y2="468" stroke="#c9a84c" stroke-width="5" stroke-linecap="round"/>
+</svg>

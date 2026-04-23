@@ -1,0 +1,8 @@
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <!-- Maskable icon (with safe zone) - white with navy background -->
+  <rect width="192" height="192" fill="#003366"/>
+  <!-- Shield for maskable safe zone -->
+  <path d="M 96 30 L 145 50 L 145 100 C 145 128 122 158 96 171 C 70 158 47 128 47 100 L 47 50 Z" fill="#ffffff"/>
+  <!-- B Letter -->
+  <text x="96" y="135" text-anchor="middle" font-size="68" font-weight="bold" fill="#003366" font-family="Georgia, serif">B</text>
+</svg>
